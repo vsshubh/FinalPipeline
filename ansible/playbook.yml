@@ -8,8 +8,3 @@
         src: "/var/lib/jenkins/workspace/FinalPipeline/target/MavenAnsibleWebApp.war"
         dest: "/opt/tomcat/webapps/MavenAnsibleWebApp.war"
         remote_src: no
-
-    - name: Restart Tomcat
-      systemd:
-        name: tomcat
-        state: restarted
