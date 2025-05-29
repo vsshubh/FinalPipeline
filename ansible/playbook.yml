@@ -3,8 +3,7 @@
   hosts: web
   become: yes
   tasks:
-    - name: Copy war file
-      copy:
+    - name: Copy War File to Tomcat
         src: "/var/lib/jenkins/workspace/FinalPipeline/target/MavenAnsibleWebApp.war"
-        dest: "/opt/tomcat/webapps/MavenAnsibleWebApp.war"
+        dest: "/opt/tomcat/MavenAnsibleWebApp.war"
         remote_src: no
