@@ -4,6 +4,7 @@
   become: yes
   tasks:
     - name: Copy War File to Tomcat
-        src: "/var/lib/jenkins/workspace/FinalPipeline/target/MavenAnsibleWebApp.war"
-        dest: "/opt/tomcat/MavenAnsibleWebApp.war"
-        remote_src: no
+        copy:
+          src: "/var/lib/jenkins/workspace/FinalPipeline/target/MavenAnsibleWebApp.war"
+          dest: "/opt/tomcat/MavenAnsibleWebApp.war"
+          remote_src: no
